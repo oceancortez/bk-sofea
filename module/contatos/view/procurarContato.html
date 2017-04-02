@@ -1,0 +1,59 @@
+<div ng-controller="ContatoController as contatoCtrl">
+
+    <div id="procurarForm">
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="col-sm-6">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-body">
+
+                            <div class="form-group">
+
+                                <label for="id">Procurar por ID</label>
+                                <input id="id" type="text" ng-model="contato.id" />
+                                <button id="id" class="btn btn-warning" type="submit" ng-click="contatoCtrl.procurarContato(contato)">
+                                    Procurar ?
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel panel-success">
+                        <div class="panel panel-body">
+
+                            <div class="form-group">
+
+                                <label for="id">{{contatoCtrl.contato.id}}</label>
+                                <label for="id">{{contatoCtrl.contato.nome}}</label>
+                                <label for="id">{{contatoCtrl.contato.email}}</label>
+                                <label for="id">{{contatoCtrl.contato.dtNascimento}}</label>
+                                <label for="id">{{contatoCtrl.contato.telefone}}</label>
+                                <label for="id">{{contatoCtrl.contato.sexo}}</label>
+
+                            </div>
+
+                            <div class="alert-danger">{{contatoCtrl.error}}</div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-6">
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

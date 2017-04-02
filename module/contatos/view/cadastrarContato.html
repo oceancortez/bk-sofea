@@ -1,0 +1,73 @@
+<div ng-controller="ContatoController as contatoCtrl">
+    <h4>Cadastrar Contatos</h4>
+    <form id="contatoForm">
+
+        <div class="panel-group">
+            <div class="row">
+
+
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label for="id">Id:</label>
+                                    <input type="text" class="form-control" id="id" ng-model="contato.id" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nome">nome:</label>
+                                    <input type="text" class="form-control" id="nome" ng-model="contato.nome" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">email:</label>
+                                    <input type="email" class="form-control" id="email" ng-model="contato.email" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dtNascimento">Data de Nascimento:</label>
+                                    <input type="text" class="form-control" id="dtNascimento" ng-model="contato.dtNascimento" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefone">telefone:</label>
+                                    <input type="text" class="form-control" id="telefone" ng-model="contato.telefone" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sexo">sexo:</label>
+                                    <input type="text" class="form-control" id="sexo" ng-model="contato.sexo" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" id="sexo" ng-click="" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--inclusão de pagina html-->
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="row passo-heading">
+                                <div class="marker">5</div>
+                                <div>Registrar Atividades</div>
+                                <i class="ps-custom fa fa-2x" </i>
+                            </div>
+                            <div class="col-md-12" data-ng-include="'module/contatos/view/formataUrlContato.html'"> </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>

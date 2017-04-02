@@ -1,0 +1,60 @@
+<html ng-app="oxi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contatos</title>
+
+    <!--Lembrando que a index.html deve ficar no root do projeto-->
+
+    <!-- Os importes das libs do angular -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- Os importes das libs do angular -->
+
+    <!-- import do arquivo de css-->
+    <link rel="stylesheet" type="text/css" href="module/contatos/css/contatos.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- import do arquivo de css-->
+
+
+    <!-- Os importes dos javascript -->
+    <script src="app.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="route-config.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/common/common.module.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/common/service/notifications.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/common/service/i18nNotifications.js?v=<%= jsversion %>" charset="UTF-8"></script>    
+    <script src="module/contatos/js/contato.module.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/contatos/js/controller/contatos.controller.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/contatos/js/business/contatos.business.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/contatos/js/service/contatos.service.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/contatos/js/facade/contatos.facade.js?v=<%= jsversion %>" charset="UTF-8"></script>
+    <script src="module/contatos/js/factory/contatos.factory.js?v=<%= jsversion %>" charset="UTF-8"></script>   
+    <!-- Os importes dos javascript -->
+</head>
+
+<body>
+
+    <div class="row">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav navbar-nav navbar-center">
+                <!--Nesta versao do angular mudou de # para #! o redirecionamento das paginas-->
+                <li role="presentation"><a href="#!/cadastrar-contato">Cadastrar Contato</a></li>
+                <li role="presentation"><a href="#!/listar-contatos">Lista de Contatos</a></li>
+                <li role="presentation"><a href="#!/procurar-contato">Procurar Contato</a></li>
+                <li role="presentation"><a href="#!/adm">Administrador</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading  text-center">
+            <h4>API Porto Seguro</h4>
+        </div>
+    </div>
+
+    <!-- Os importe das views -->
+    <div ng-view></div>
+
+</body>
+
+</html>

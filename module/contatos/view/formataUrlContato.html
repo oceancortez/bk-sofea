@@ -1,0 +1,65 @@
+<div ng-controller="ContatoController as contatoCtrl">
+    <h4>Formatar URL</h4>
+    <form id="formataUrlForm">
+
+        <div class="panel-group">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label for="URL">*Atencao para o padrao: http://seuhost/xpto?parametroum=< parametroum>&parametrodois=< parametrodois></label>
+                                    <label for="URL">URL:</label>
+                                    <input type="text" class="form-control" id="URL" ng-model="textoUrl.url" />
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="metodo">Selecione o tipo de Metodo:</label>
+                                    <select name="metodo" id="metodo" ng-model="textoUrl.metodo">
+                                        <option value="">--Selecione--</option>
+                                        <option value="GET">GET</option>
+                                        <option value="POST">POST</option> 
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" ng-click="contatoCtrl.formataUrl(textoUrl)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h4>Url OK</h4>
+                        <div class="panel panel-primary">
+
+                            <div class="panel-body">
+                                <label data-ng-if="contatoCtrl.urlFormatadaGET">
+                                    {{contatoCtrl.urlFormatadaGET}}
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-primary">
+
+                            <div class="panel-body">
+                                <label data-ng-if="contatoCtrl.urlFormatadaPOST.url">
+                                    {{contatoCtrl.urlFormatadaPOST.url}}
+                                </label>
+
+                                <label data-ng-if="contatoCtrl.urlFormatadaPOST.body">
+                                    {{contatoCtrl.urlFormatadaPOST.body}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,43 @@
+<div ng-controller="ContatoController as contatoCtrl">
+<h3 class="panel-text-center">Listar Contatos</h3>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title text-center">Listagem</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+        <tr>
+          <th>id</th>
+          <th>Nome</th>
+          <th>Endereço</th>
+          <th>Data de Nascimento</th>
+          <th>Telefone</th>
+          <th>Sexo</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+          
+          
+        </tr>
+        <tr ng-repeat="contato in contatoCtrl.listaDeContatos">
+           <td>{{contato.id}}</td> 
+          <td>{{contato.nome}}</td>
+          <td>{{contato.endereco}}</td>
+          <td>{{contato.dtNascimento| date : "dd/MM/yyyy"}}</td>
+          <td>{{contato.telefone}}</td>
+          <td>{{contato.sexo}}</td>
+            
+          <td>
+                <button class="btn btn-warning" ng-click="editItem(contato.id)"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Editar</button>
+               
+          </td>
+          <td>
+             <button class="btn btn-danger" ng-click="deleteItem(contato.id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Excluir</button>
+            
+            </td>
+            </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  </div>
